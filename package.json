@@ -1,0 +1,42 @@
+{
+  "name": "draketech-test",
+  "version": "0.0.1",
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "redux"
+  ],
+  "author": "Julio Vásquez <jualvalitube@gmail.com>",
+  "repository": "https://github.com/Julio-Vasquez/draketech-test.git",
+  "homepage": "https://github.com/Julio-Vasquez/draketech-test.git",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@reduxjs/toolkit": "^1.7.1",
+    "antd": "^4.18.4",
+    "axios": "^0.25.0",
+    "bootstrap-4-grid": "^3.4.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^1.1.3",
+    "sass": "^1.48.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/react-redux": "^7.1.22",
+    "@types/redux-logger": "^3.0.9",
+    "@vitejs/plugin-react": "^1.0.7",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  }
+}
