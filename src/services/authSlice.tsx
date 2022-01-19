@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+import { loginFailedType, loginSuccessType, loginAction } from './types'
+
 export const initialState = {
   authentication: false,
   error: false,
@@ -7,7 +9,7 @@ export const initialState = {
   loading: false,
   token: '',
   message: '',
-  username: '',
+  user: '',
 }
 
 export const AUTH_KEY = 'AUTH'
@@ -16,11 +18,11 @@ const AuthSlice = createSlice({
   name: AUTH_KEY,
   initialState,
   reducers: {
-    login: state => ({
+    login: (state, action: loginAction) => ({
       ...state,
       loading: true,
     }),
-    loginSuccess: (state, { payload }) => ({
+    loginSuccess: (state, { payload }: loginSuccessType) => ({
       ...state,
       authentication: true,
       error: false,
@@ -28,9 +30,9 @@ const AuthSlice = createSlice({
       loading: false,
       token: payload.token,
       message: 'Inicio de sesión correcto',
-      user: payload.username,
+      user: payload.user,
     }),
-    loginFailed: (state, { payload }) => ({
+    loginFailed: (state, { payload }: loginFailedType) => ({
       ...state,
       authentication: false,
       error: true,
