@@ -1,0 +1,1 @@
+export { MetaDescription } from './MetaDescription'

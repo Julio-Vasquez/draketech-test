@@ -1,0 +1,13 @@
+.login {
+  &_btn {
+    background: linear-gradient(to left, #6781f9, #e364be);
+    border-radius: 16px;
+    color: white;
+    display: block;
+    font-size: 16px;
+    margin: 20px auto 0px;
+    padding: 20px;
+    text-transform: uppercase;
+    width: 300px;
+  }
+}

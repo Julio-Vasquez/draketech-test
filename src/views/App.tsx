@@ -1,8 +1,13 @@
+import { HelmetProvider } from 'react-helmet-async'
+
+import { PrivateRoutes, PublicRoutes } from './../routes'
+
 function App() {
+  const auth = false
   return (
-    <div className="App">
-      <p className="text-center">holis</p>
-    </div>
+    <HelmetProvider>
+      <div className="App">{auth ? <PrivateRoutes /> : <PublicRoutes />}</div>
+    </HelmetProvider>
   )
 }
 
