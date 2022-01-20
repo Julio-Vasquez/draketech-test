@@ -1,4 +1,36 @@
 .content_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 92vh;
+  background: {
+    image: url('./src/assets/img/views/home.jpg');
+    repeat: no-repeat;
+    attachment: fixed;
+    position: center;
+    size: content;
+  }
   &_text {
+    text-align: center;
+    h4 {
+      font: {
+        family: 'leoscar';
+        size: 24px;
+        weight: 600;
+      }
+      text-transform: uppercase;
+      span {
+        color: sienna;
+        font-weight: 700;
+      }
+    }
+    p {
+      font: {
+        size: 16px;
+        weight: 500;
+      }
+      margin-top: 30px;
+      text-align: justify;
+    }
   }
 }

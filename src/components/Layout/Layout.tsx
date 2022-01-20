@@ -20,7 +20,7 @@ export const LayoutPrivate = ({ children }: { children: ReactNode }) => {
           <Menu.Item key={1}>
             <Link to="/home">Tareas</Link>
           </Menu.Item>
-          <Menu.Item key={2}>
+          <Menu.Item key={2} style={{ marginLeft: '90%' }}>
             <Tooltip title="Cerrar sesión">
               <LogoutOutlined className="photo" onClick={handleClickLogout} />
             </Tooltip>

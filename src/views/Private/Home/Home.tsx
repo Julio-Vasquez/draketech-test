@@ -3,7 +3,6 @@ import { AUTH_KEY } from './../../../services/auth/authSlice'
 import { MetaDescription } from './../../../components/MetaDescription'
 
 import styles from './Home.module.scss'
-import { Link } from 'react-router-dom'
 
 const Home = () => {
   const { user } = useData({ reducer: AUTH_KEY })
@@ -14,11 +13,16 @@ const Home = () => {
         description="Pagina de inicio"
         keywords={['Inicio', 'home', 'welcome']}
       />
-      <div
-        className={`${styles.content_body_text} m-0 justify-content-center align-items-center`}
-      >
-        Bienvenido {user} usuario, espereramos este bien.
-        <Link to="/todos">list</Link>
+      <div className={`${styles.content_body_text}`}>
+        <h4>
+          WELCOME - <span>{user}</span>
+        </h4>
+        <p className="col-6 offset-3">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+          voluptatem, quia iusto cum hic ipsam eligendi a nostrum necessitatibus
+          libero reiciendis amet ullam tenetur ea perferendis itaque, expedita
+          distinctio iste.
+        </p>
       </div>
     </div>
   )
