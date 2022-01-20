@@ -26,3 +26,8 @@ Permite vizualisar el bulde generador anteriormente.<br />
 ## Learn More
 
 Puedes leer mas en: [Vite documentation](https://vitejs.dev/guide/).
+
+### Consideraciones
+
+Se uso [@reduxjs/toolkit](https://redux-toolkit.js.org/) dado que la documentacion oficial recomienda el uso de ella, <br />
+Una muy buena alternativa seria [rematchjs](https://rematchjs.org/) teniendo en cuenta que solo son 4.7kb

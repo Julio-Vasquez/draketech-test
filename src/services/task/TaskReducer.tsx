@@ -18,6 +18,10 @@ export const taskReducer = (
     }
 
     case currentAction.UPDATE_TASK: {
+      const taskListUpdate = state.filter(
+        (task: basicTask) => task.id !== action.task.id
+      )
+      return [...taskListUpdate, action.task]
     }
 
     case currentAction.GET_TASK: {
