@@ -4,7 +4,7 @@ import LoginReducer, {
   AUTH_KEY,
   logout,
   initialState,
-} from './../services/authSlice'
+} from '../services/auth/authSlice'
 
 const appReducers = combineReducers({
   [AUTH_KEY]: LoginReducer,

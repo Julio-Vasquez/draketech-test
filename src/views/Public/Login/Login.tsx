@@ -2,7 +2,7 @@ import { Form, Input, Button } from 'antd'
 import { useDispatch } from 'react-redux'
 
 import { MetaDescription } from './../../../components/MetaDescription'
-import { login } from '../../../services/authSlice'
+import { login } from '../../../services/auth/authSlice'
 
 import { FormData } from './types'
 

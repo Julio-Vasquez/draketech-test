@@ -13,7 +13,7 @@ export const PrivateRoutes = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/" element={<ToDos />} />
+          <Route path="/todos" element={<ToDos />} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
       </Suspense>

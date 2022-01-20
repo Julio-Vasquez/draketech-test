@@ -2,7 +2,7 @@ import { put, takeLatest, all } from 'redux-saga/effects'
 
 import { login, loginSuccess, loginFailed } from './authSlice'
 
-import { DB_USERS } from './../dummy/users'
+import { DB_USERS } from '../../common/dummy/users'
 import { loginAction } from './types'
 
 function* fakeLogin({ payload }: loginAction) {
