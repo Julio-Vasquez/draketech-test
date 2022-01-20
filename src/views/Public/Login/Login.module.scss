@@ -1,13 +1,31 @@
 .login {
+  font-family: leoscar;
+  background-image: url('./src/assets/img/bgs/login.jpg');
+  h2,
+  label {
+    color: white;
+  }
+  h2 {
+    font: {
+      size: 48px;
+      weight: 600;
+    }
+  }
+
   &_btn {
     background: linear-gradient(to left, #6781f9, #e364be);
     border-radius: 16px;
     color: white;
-    display: block;
-    font-size: 16px;
-    margin: 20px auto 0px;
-    padding: 20px;
+    font: {
+      size: 16px;
+      weight: 600;
+    }
+    height: 50px;
     text-transform: uppercase;
     width: 300px;
+    &:hover {
+      background: linear-gradient(to right, #6781f9, #e364be);
+      color: white;
+    }
   }
 }

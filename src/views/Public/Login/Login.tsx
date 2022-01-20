@@ -1,10 +1,12 @@
-import { Form, Input, Button } from 'antd'
+import { Form, Input, Button, Col } from 'antd'
 import { useDispatch } from 'react-redux'
 
 import { MetaDescription } from './../../../components/MetaDescription'
 import { login } from '../../../services/auth/authSlice'
 
 import { FormData } from './types'
+
+import styles from './Login.module.scss'
 
 const Login = () => {
   const dispath = useDispatch()
@@ -14,24 +16,19 @@ const Login = () => {
   }
 
   return (
-    <div>
+    <div
+      className={`${styles.login} m-0 justify-content-center align-items-center vh-100 row`}
+    >
       <MetaDescription
         title="Login"
         description="Login Page"
         keywords={['login', 'auth']}
       />
-      <h2>LOGIN</h2>
-      <Form
-        onFinish={handleClick}
-        wrapperCol={{
-          sm: { span: 20, offset: 2 },
-          md: { span: 14, offset: 5 },
-          lg: { span: 12, offset: 6 },
-          xl: { span: 10, offset: 7 },
-          xxl: { span: 8, offset: 8 },
-        }}
-      >
+
+      <Form className="col-4 text-center" onFinish={handleClick}>
+        <h2 className="col-auto text-center">Iniciar Sesion</h2>
         <Form.Item
+          label="mail"
           name="email"
           rules={[
             { required: true, message: 'Por favor ingrese un email' },
@@ -43,6 +40,7 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item
+          label="pwd"
           name="password"
           rules={[
             { required: true, message: 'Por favor ingrese un email' },
@@ -54,8 +52,11 @@ const Login = () => {
           <Input.Password />
         </Form.Item>
 
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button type="primary" htmlType="submit">
+        <Form.Item className="col-auto">
+          <Button
+            htmlType="submit"
+            className={`${styles.login_btn} text-center col-6`}
+          >
             Login
           </Button>
         </Form.Item>
