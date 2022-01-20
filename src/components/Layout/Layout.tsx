@@ -27,7 +27,7 @@ export const LayoutPrivate = ({ children }: { children: ReactNode }) => {
           </Menu.Item>
         </Menu>
       </Layout.Header>
-      <Layout.Content>{children}</Layout.Content>
+      <Layout.Content style={{ bottom: 0 }}>{children}</Layout.Content>
     </Layout>
   )
 }

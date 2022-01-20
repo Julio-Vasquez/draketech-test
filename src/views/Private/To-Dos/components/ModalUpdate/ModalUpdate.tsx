@@ -18,7 +18,9 @@ export const ModalUpdate = ({
           onCancel={close}
           onOk={ok}
           visible={open}
-        ></Modal>
+        >
+          aqui va el form de actualizacion
+        </Modal>
       </Space>
     </div>
   )

@@ -6,7 +6,9 @@ import { MetaDescription } from '../../../components/MetaDescription'
 import { TaskContext } from '../../../context/TaskContextProvider'
 import { currentAction } from '../../../services/task/TaskAction'
 import { AddTask } from './components/AddTask'
-import { ListTask } from './components/ListTask/ListTask'
+import { ListTask } from './components/ListTask'
+
+import styles from './ToDos.module.scss'
 
 const ToDos = () => {
   const { dispatch } = useContext(TaskContext)
@@ -23,13 +25,13 @@ const ToDos = () => {
   }, [dispatch])
 
   return (
-    <div>
+    <div className={`${styles.to_dos} col-12 mr-0`}>
       <MetaDescription
         title="Listado de tareas"
         keywords={['ToDos', 'Task', 'CRUD']}
         description="Formulario para visualizar y gestionar las tareas"
       />
-      <div className="row">
+      <div className="row h-100 ">
         <div className="col-6">
           <ListTask />
         </div>
