@@ -2,12 +2,12 @@ import { Form, Input, Button } from 'antd'
 import axios from 'axios'
 import { useContext } from 'react'
 import { v4 } from 'uuid'
-import { URL_API } from '../../../../common/env/env'
+import { URL_API } from '../../../../../common/env/env'
 
-import { TaskContext } from '../../../../context/TaskContextProvider'
-import { useData } from '../../../../hooks/useData'
-import { AUTH_KEY } from '../../../../services/auth/authSlice'
-import { currentAction } from '../../../../services/task/TaskAction'
+import { TaskContext } from '../../../../../context/TaskContextProvider'
+import { useData } from '../../../../../hooks/useData'
+import { AUTH_KEY } from '../../../../../services/auth/authSlice'
+import { currentAction } from '../../../../../services/task/TaskAction'
 
 type formData = {
   title: string
