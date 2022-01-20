@@ -3,20 +3,26 @@ import { Layout, Menu, Tooltip } from 'antd'
 import { Link } from 'react-router-dom'
 import { LogoutOutlined } from '@ant-design/icons'
 
+import { useDispatch } from 'react-redux'
+import { logout } from '../../services/auth/authSlice'
+
 export const LayoutPrivate = ({ children }: { children: ReactNode }) => {
+  const dispatch = useDispatch()
+
+  const handleClickLogout = () => dispatch(logout())
   return (
     <Layout>
       <Layout.Header>
         <Menu mode="horizontal" theme="dark">
-          <Menu.Item>
+          <Menu.Item key={0}>
             <Link to="/home">Inicio</Link>
           </Menu.Item>
-          <Menu.Item>
+          <Menu.Item key={1}>
             <Link to="/home">Tareas</Link>
           </Menu.Item>
-          <Menu.Item style={{ right: 0 }}>
+          <Menu.Item key={2}>
             <Tooltip title="Cerrar sesión">
-              <LogoutOutlined className="photo" />
+              <LogoutOutlined className="photo" onClick={handleClickLogout} />
             </Tooltip>
           </Menu.Item>
         </Menu>

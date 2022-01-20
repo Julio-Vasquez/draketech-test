@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { useContext, useEffect } from 'react'
+
 import { URL_API } from '../../../common/env/env'
+import { MetaDescription } from '../../../components/MetaDescription'
 import { TaskContext } from '../../../context/TaskContextProvider'
 import { currentAction } from '../../../services/task/TaskAction'
 import { AddTask } from './components/AddTask'
@@ -22,6 +24,11 @@ const ToDos = () => {
 
   return (
     <div>
+      <MetaDescription
+        title="Listado de tareas"
+        keywords={['ToDos', 'Task', 'CRUD']}
+        description="Formulario para visualizar y gestionar las tareas"
+      />
       <div className="row">
         <div className="col-6">
           <ListTask />

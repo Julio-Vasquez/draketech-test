@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux'
 
 import { MetaDescription } from './../../../components/MetaDescription'
 import { login } from '../../../services/auth/authSlice'
-
 import { FormData } from './types'
 
 import styles from './Login.module.scss'
@@ -26,7 +25,7 @@ const Login = () => {
       />
 
       <Form className="col-4 text-center" onFinish={handleClick}>
-        <h2 className="col-auto text-center">Iniciar Sesion</h2>
+        <h2 className="col-auto text-center">Iniciar Sesión</h2>
         <Form.Item
           label="mail"
           name="email"
