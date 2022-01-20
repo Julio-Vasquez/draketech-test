@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Loading } from './../components/Loading'
 
 const Login = lazy(() => import('../views/Public/Login'))
+const Error404 = lazy(() => import('./../components/Error404'))
 
 export const PublicRoutes = () => {
   return (
@@ -12,7 +13,8 @@ export const PublicRoutes = () => {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="*" element={<Navigate replace to="/" />} />
+          <Route path="/404" element={<Error404 />} />
+          <Route path="*" element={<Navigate replace to="/404" />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

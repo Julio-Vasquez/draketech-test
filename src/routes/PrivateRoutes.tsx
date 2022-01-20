@@ -6,6 +6,7 @@ import { LayoutPrivate } from './../components/Layout'
 
 const Home = lazy(() => import('./../views/Private/Home'))
 const ToDos = lazy(() => import('./../views/Private/To-Dos'))
+const Error404 = lazy(() => import('./../components/Error404'))
 
 export const PrivateRoutes = () => {
   return (
@@ -16,7 +17,8 @@ export const PrivateRoutes = () => {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/todos" element={<ToDos />} />
-            <Route path="*" element={<Navigate replace to="/" />} />
+            <Route path="/404" element={<Error404 />} />
+            <Route path="*" element={<Navigate replace to="/404" />} />
           </Routes>
         </Suspense>
       </LayoutPrivate>
