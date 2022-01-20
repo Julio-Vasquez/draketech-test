@@ -14,7 +14,9 @@ const Home = () => {
         description="Pagina de inicio"
         keywords={['Inicio', 'home', 'welcome']}
       />
-      <div className={`${styles.content_body_text} text-center`}>
+      <div
+        className={`${styles.content_body_text} m-0 justify-content-center align-items-center`}
+      >
         Bienvenido {user} usuario, espereramos este bien.
         <Link to="/todos">list</Link>
       </div>
